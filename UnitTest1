@@ -1,0 +1,31 @@
+#include "opencv2/core/core.hpp"
+#include "opencv2/highgui/highgui.hpp"
+#include "opencv2/imgproc/imgproc.hpp"
+#include <iomanip>
+#include <algorithm>
+#include "userinterface.h"
+#include "conio.h"
+#include "stdlib.h"
+#include <limits>
+#include <iostream>
+
+//requires OpenCV
+
+
+std::string image_path = samples::findFile("C:/Users/Francis/badFile.jpg");
+Mat src = imread(image_path, IMREAD_COLOR);;
+
+void unitTest()
+{
+    if (src.empty()) 
+    {
+        cout << "Image not loaded\n";
+        cin.get();
+    }  
+}
+
+int main()
+{
+  unitTest();
+}
+
