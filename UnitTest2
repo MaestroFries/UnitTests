@@ -1,0 +1,27 @@
+#include <iostream>     
+#include <fstream>    
+
+std::fstream myData;
+  
+myData.open ("Notepadtest.txt");
+
+void unitTest()
+{
+  if (myData.is_open())
+  {
+    std::cout << "File has opened.\n";
+    myData.close();
+  }
+  else
+  {
+    std::cout << "Error: File has not opened.";
+  }
+}
+
+int main () 
+{
+  
+  unitTest();
+
+  return 0;
+}
